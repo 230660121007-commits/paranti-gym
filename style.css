@@ -1,0 +1,339 @@
+/* Warna tema: hitam-merah sporty */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+/* Header */
+/* Header dengan background transparan dan efek blur */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 46, 46, 0.4);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+/* Shape dekoratif di belakang menu kanan atas */
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 220px;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 46, 46, 0.2), rgba(255, 46, 46, 0.05));
+  clip-path: polygon(60% 0, 100% 0, 100% 100%, 30% 100%);
+  z-index: 0;
+  transition: all 0.3s;
+}
+
+/* Efek saat scroll */
+header.scrolled {
+  background: linear-gradient(90deg, #000000 0%, #2b0000 100%);
+  box-shadow: 0 2px 10px rgba(255, 46, 46, 0.3);
+}
+
+/* ====== LOGO PARANTI GYM ====== */
+.logo {
+  position: relative;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff; /* warna putih */
+  letter-spacing: 1.5px;
+  z-index: 2;
+  animation: logoFade 1.8s ease-out forwards;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 46, 46, 0.3);
+}
+
+/* Kata 'Gym' tetap merah menyala */
+.logo .red {
+  color: #fffefe;
+}
+
+/* Animasi untuk logo */
+@keyframes logoFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px) scale(0.8);
+    text-shadow: none;
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(5px) scale(1.05);
+    text-shadow: 0 0 15px rgba(255, 46, 46, 0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    text-shadow: 0 0 8px rgba(255, 46, 46, 0.3);
+  }
+}
+
+nav a {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+  color: #ff2e2e;
+  transform: scale(1.05);
+}
+
+.logo {
+  font-size: 24px;
+  color: #ff2e2e;
+  font-weight: bold;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff2e2e;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  color: #ff2e2e;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  color: #eee;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #ff2e2e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #d61a1a;
+}
+
+/* Program Section */
+.program {
+  background-color: #0d0d0d; /* warna hitam gelap */
+  padding: 70px 20px;
+  text-align: center;
+  border-top: 2px solid #1b1b1b; /* garis pemisah halus di atas */
+  border-bottom: 2px solid #1b1b1b; /* garis pemisah halus di bawah */
+}
+
+.program-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Gaya umum kartu program */
+.program-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 30px;
+  border-radius: 10px;
+  width: 280px;
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, border 0.3s;
+}
+
+/* Efek overlay biar teks tetap jelas */
+.program-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.program-card h3, .program-card p {
+  position: relative;
+  z-index: 1;
+}
+
+/* Efek hover */
+.program-card:hover {
+  transform: scale(1.05);
+  border: 2px solid #ff2e2e;
+}
+/* Background khusus tiap program */
+.program-card:nth-child(1) {
+  background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438');
+}
+
+.program-card:nth-child(2) {
+  background-image: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd');
+}
+
+/* Tips Section */
+.tips {
+  background: url('https://images.unsplash.com/photo-1594737625785-c2b796ef0b1c') no-repeat center center/cover;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tips::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* efek gelap agar teks terbaca */
+  z-index: 0;
+}
+
+.tips h2, .tips ul {
+  position: relative;
+  z-index: 1;
+}
+
+.tips li {
+  margin: 10px 0;
+  font-size: 1.1em;
+  transition: transform 0.3s;
+}
+
+.tips li:hover {
+  transform: scale(1.05);
+  color: #ff2e2e;
+}
+
+/* Form Section */
+.form-section {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #1a0000, #330000);
+  color: #fff;
+}
+
+.form-section h2 {
+  color: #ff2e2e;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+form input {
+  padding: 12px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+  outline: none;
+}
+
+form input:focus {
+  box-shadow: 0 0 10px #ff2e2e;
+}
+
+form button {
+  background-color: #ff2e2e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: all 0.3s;
+}
+
+form button:hover {
+  background-color: #ff4444;
+  box-shadow: 0 0 15px #ff2e2e;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9em;
+}
+/* Video background di Hero Section */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4); /* bikin teks lebih menonjol */
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  color: #ff2e2e;
+  text-shadow: 2px 2px 5px #000;
+}
+/* ==== ANIMASI SCROLL FADE-IN ==== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

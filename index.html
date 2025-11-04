@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paranti Gym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Paranti Gym</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#program">Program</a>
+            <a href="#tips">Tips</a>
+            <a href="#daftar">Daftar</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+    <video autoplay muted loop id="gymVideo">
+        <source src="video/gym.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video tag.
+    </video>
+    <div class="hero-text">
+        <h1>Bangun Tubuh Kuat, Mulai dari Disiplin Hari Ini!</h1>
+        <p>Bersama Paranti Gym, wujudkan tubuh ideal dan gaya hidup sehat.</p>
+        <button id="join-btn">Gabung Sekarang</button>
+    </div>
+</section>
+
+    <!-- Program Section -->
+    <section id="program" class="program fade-in">
+        <h2>Program Kami</h2>
+        <div class="program-container">
+            <div class="program-card">
+                <h3>Latihan Beban</h3>
+                <p>Tingkatkan kekuatan otot dan bentuk tubuh ideal dengan panduan dari pelatih profesional.</p>
+            </div>
+            <div class="program-card">
+                <h3>Nutrisi Seimbang</h3>
+                <p>Pelajari cara menjaga pola makan sehat untuk mendukung hasil latihan yang maksimal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section id="tips" class="tips fade-in">
+        <h2>Tips Sehat</h2>
+        <ul>
+            <li>Istirahat cukup minimal 7 jam setiap malam.</li>
+            <li>Minum air putih 2-3 liter setiap hari.</li>
+            <li>Jaga konsistensi latihan minimal 3x seminggu.</li>
+            <li>Konsumsi protein dan sayuran seimbang setiap hari.</li>
+        </ul>
+    </section>
+
+    <!-- Form Pendaftaran -->
+    <section id="daftar" class="form-section fade-in">
+        <h2>Daftar Sekarang</h2>
+        <form>
+            <input type="text" placeholder="Nama Lengkap" required>
+            <input type="email" placeholder="Email" required>
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Paranti Gym. All Rights Reserved.</p>
+        <p>Kontak: info@parantigym.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
